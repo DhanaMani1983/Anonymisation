@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.GMD.Adobe.Anonymisation.Data", "Saga.GMD.Adobe.Anonymisation.Data\Saga.GMD.Adobe.Anonymisation.Data.csproj", "{83C60331-FA2F-4883-97B6-07E961825525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.GMD.Adobe.Anonymisation.BLL", "Saga.GMD.Adobe.Anonymisation.BLL\Saga.GMD.Adobe.Anonymisation.BLL.csproj", "{7EF19D90-CDA0-4E77-B865-6223C08FCB6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.GMD.Adobe.Anonymisation.UnitTests", "Saga.GMD.Adobe.Anonymisation.UnitTests\Saga.GMD.Adobe.Anonymisation.UnitTests.csproj", "{BA9C3B76-1503-4292-8DD6-BE3B0DE2D6BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.GMD.Adobe.Anonymisation.API", "Saga.GMD.Adobe.Anonymisation.API\Saga.GMD.Adobe.Anonymisation.API.csproj", "{B4AFAA8D-0A55-4F79-9A53-162A3D27B6E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saga.GMD.Adobe.Anonymisation.WebUtility", "Saga.GMD.Adobe.Anonymisation.WebUtility\Saga.GMD.Adobe.Anonymisation.WebUtility.csproj", "{B3F22069-3F9E-4966-9A89-310C86BBC389}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83C60331-FA2F-4883-97B6-07E961825525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C60331-FA2F-4883-97B6-07E961825525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C60331-FA2F-4883-97B6-07E961825525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C60331-FA2F-4883-97B6-07E961825525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF19D90-CDA0-4E77-B865-6223C08FCB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF19D90-CDA0-4E77-B865-6223C08FCB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF19D90-CDA0-4E77-B865-6223C08FCB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF19D90-CDA0-4E77-B865-6223C08FCB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA9C3B76-1503-4292-8DD6-BE3B0DE2D6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9C3B76-1503-4292-8DD6-BE3B0DE2D6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9C3B76-1503-4292-8DD6-BE3B0DE2D6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9C3B76-1503-4292-8DD6-BE3B0DE2D6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4AFAA8D-0A55-4F79-9A53-162A3D27B6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4AFAA8D-0A55-4F79-9A53-162A3D27B6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4AFAA8D-0A55-4F79-9A53-162A3D27B6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4AFAA8D-0A55-4F79-9A53-162A3D27B6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F22069-3F9E-4966-9A89-310C86BBC389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F22069-3F9E-4966-9A89-310C86BBC389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F22069-3F9E-4966-9A89-310C86BBC389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F22069-3F9E-4966-9A89-310C86BBC389}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://gmdtfs:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Saga.GMD.Adobe.Anonymisation.Data\\Saga.GMD.Adobe.Anonymisation.Data.csproj
+		SccProjectName1 = Saga.GMD.Adobe.Anonymisation.Data
+		SccLocalPath1 = Saga.GMD.Adobe.Anonymisation.Data
+		SccProjectUniqueName2 = Saga.GMD.Adobe.Anonymisation.BLL\\Saga.GMD.Adobe.Anonymisation.BLL.csproj
+		SccProjectName2 = Saga.GMD.Adobe.Anonymisation.BLL
+		SccLocalPath2 = Saga.GMD.Adobe.Anonymisation.BLL
+		SccProjectUniqueName3 = Saga.GMD.Adobe.Anonymisation.UnitTests\\Saga.GMD.Adobe.Anonymisation.UnitTests.csproj
+		SccProjectName3 = Saga.GMD.Adobe.Anonymisation.UnitTests
+		SccLocalPath3 = Saga.GMD.Adobe.Anonymisation.UnitTests
+		SccProjectUniqueName4 = Saga.GMD.Adobe.Anonymisation.API\\Saga.GMD.Adobe.Anonymisation.API.csproj
+		SccProjectName4 = Saga.GMD.Adobe.Anonymisation.API
+		SccLocalPath4 = Saga.GMD.Adobe.Anonymisation.API
+		SccProjectUniqueName5 = Saga.GMD.Adobe.Anonymisation.WebUtility\\Saga.GMD.Adobe.Anonymisation.WebUtility.csproj
+		SccProjectName5 = Saga.GMD.Adobe.Anonymisation.WebUtility
+		SccLocalPath5 = Saga.GMD.Adobe.Anonymisation.WebUtility
+	EndGlobalSection
+EndGlobal

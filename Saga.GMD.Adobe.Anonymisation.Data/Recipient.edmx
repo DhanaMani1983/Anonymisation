@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GMD_DWHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="recipient">
+          <Key>
+            <PropertyRef Name="Pers_id" />
+          </Key>
+          <Property Name="Pers_id" Type="bigint" Nullable="false" />
+          <Property Name="Encrypted_Pers_id" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Hgrp_id" Type="bigint" />
+          <Property Name="Visitor_id" Type="bigint" />
+          <Property Name="CTI_id" Type="bigint" />
+          <Property Name="Encrypted_CTI_id" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Create_Date_Customer" Type="date" Nullable="false" />
+          <Property Name="Create_Media" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Create_Source" Type="nvarchar" MaxLength="255" />
+          <Property Name="DC_Brand" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Device" Type="nvarchar" MaxLength="255" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Age" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="Email_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Encrypted_Email_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Encrypted_Email_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Exclusion_Zone" Type="nvarchar" MaxLength="255" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+          <Property Name="Initials" Type="nvarchar" MaxLength="255" />
+          <Property Name="Last_update_Customer" Type="date" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Property_ID" Type="bigint" Nullable="false" />
+          <Property Name="location_address1" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address2" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address3" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address4" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address5" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address6" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address7" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_zipCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_DPS" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Marital_Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name_Suffix" Type="nvarchar" MaxLength="255" />
+          <Property Name="Occupation_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Occupation_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Landline_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Landline_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Mobile_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Mobile_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Region" Type="nvarchar" MaxLength="255" />
+          <Property Name="Retirement_Date" Type="date" />
+          <Property Name="Saga_Brand" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Salutation_Detail" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Salutation_Envelope" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SMS_Number_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="SMS_Opt_Out_DC" Type="bit" Nullable="false" />
+          <Property Name="SMS_Number_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="SMS_Opt_Out_Saga" Type="bit" Nullable="false" />
+          <Property Name="Staff_Flag" Type="nvarchar" MaxLength="255" />
+          <Property Name="suppressionFlag" Type="bit" />
+          <Property Name="suppressionReason" Type="nvarchar" MaxLength="255" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TPS_Flag_Landline_DC" Type="bit" />
+          <Property Name="TPS_Flag_Landline_Saga" Type="bit" />
+          <Property Name="TPS_Flag_Mobile_DC" Type="bit" />
+          <Property Name="TPS_Flag_Mobile_Saga" Type="bit" />
+          <Property Name="UPRN" Type="bigint" Nullable="false" />
+          <Property Name="UPRN_Match_Level" Type="nvarchar" MaxLength="255" />
+          <Property Name="Blacklist" Type="bit" />
+          <Property Name="GMD_Record_Creation_Date" Type="datetime" Nullable="false" />
+          <Property Name="GMD_Created_by" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GMD_Modified_Date" Type="datetime" />
+          <Property Name="GMD_Modified_by" Type="nvarchar" MaxLength="255" />
+          <Property Name="GMD_Deletion_Date" Type="datetime" />
+          <Property Name="date_sent_to_adobe" Type="datetime" />
+          <Property Name="adobe_sent_filename" Type="nvarchar" MaxLength="255" />
+          <Property Name="received_response" Type="bit" />
+          <Property Name="received_response_date" Type="datetime" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Publication_Data_Management.AdobeExtractCP.recipient' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="recipient1">
+          <Key>
+            <PropertyRef Name="Pers_id" />
+          </Key>
+          <Property Name="Pers_id" Type="bigint" Nullable="false" />
+          <Property Name="Encrypted_Pers_id" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Hgrp_id" Type="bigint" />
+          <Property Name="Visitor_id" Type="bigint" />
+          <Property Name="CTI_id" Type="bigint" />
+          <Property Name="Encrypted_CTI_id" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Create_Date_Customer" Type="date" Nullable="false" />
+          <Property Name="Create_Media" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Create_Source" Type="nvarchar" MaxLength="255" />
+          <Property Name="DC_Brand" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Device" Type="nvarchar" MaxLength="255" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Email_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Encrypted_Email_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Encrypted_Email_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Exclusion_Zone" Type="nvarchar" MaxLength="255" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+          <Property Name="Initials" Type="nvarchar" MaxLength="255" />
+          <Property Name="Last_update_Customer" Type="date" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Property_ID" Type="bigint" Nullable="false" />
+          <Property Name="location_address1" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address2" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address3" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address4" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address5" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address6" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_address7" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_zipCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="location_DPS" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Marital_Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name_Suffix" Type="nvarchar" MaxLength="255" />
+          <Property Name="Occupation_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Occupation_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Landline_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Landline_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Mobile_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone_Mobile_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Region" Type="nvarchar" MaxLength="255" />
+          <Property Name="Retirement_Date" Type="date" />
+          <Property Name="Saga_Brand" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Salutation_Detail" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Salutation_Envelope" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="SMS_Number_DC" Type="nvarchar" MaxLength="255" />
+          <Property Name="SMS_Opt_Out_DC" Type="bit" Nullable="false" />
+          <Property Name="SMS_Number_Saga" Type="nvarchar" MaxLength="255" />
+          <Property Name="SMS_Opt_Out_Saga" Type="bit" Nullable="false" />
+          <Property Name="Staff_Flag" Type="nvarchar" MaxLength="255" />
+          <Property Name="suppressionFlag" Type="bit" />
+          <Property Name="suppressionReason" Type="nvarchar" MaxLength="255" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TPS_Flag_Landline_DC" Type="bit" />
+          <Property Name="TPS_Flag_Landline_Saga" Type="bit" />
+          <Property Name="TPS_Flag_Mobile_DC" Type="bit" />
+          <Property Name="TPS_Flag_Mobile_Saga" Type="bit" />
+          <Property Name="UPRN" Type="bigint" Nullable="false" />
+          <Property Name="UPRN_Match_Level" Type="nvarchar" MaxLength="255" />
+          <Property Name="Blacklist" Type="bit" />
+          <Property Name="GMD_Record_Creation_Date" Type="datetime" Nullable="false" />
+          <Property Name="GMD_Created_by" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="GMD_Modified_Date" Type="datetime" />
+          <Property Name="GMD_Modified_by" Type="nvarchar" MaxLength="255" />
+          <Property Name="GMD_Deletion_Date" Type="datetime" />
+          <Property Name="date_sent_to_adobe" Type="datetime" />
+          <Property Name="adobe_sent_filename" Type="nvarchar" MaxLength="255" />
+          <Property Name="received_response" Type="bit" />
+          <Property Name="received_response_date" Type="datetime" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GMD_DWHModelStoreContainer">
+          <EntitySet Name="recipient" EntityType="Self.recipient" Schema="AdobeExtract" store:Type="Tables" />
+          <EntitySet Name="recipient1" EntityType="Self.recipient1" store:Type="Tables" store:Schema="AdobeExtractCP" store:Name="recipient">
+            <DefiningQuery>SELECT 
+    [recipient1].[Pers_id] AS [Pers_id], 
+    [recipient1].[Encrypted_Pers_id] AS [Encrypted_Pers_id], 
+    [recipient1].[Hgrp_id] AS [Hgrp_id], 
+    [recipient1].[Visitor_id] AS [Visitor_id], 
+    [recipient1].[CTI_id] AS [CTI_id], 
+    [recipient1].[Encrypted_CTI_id] AS [Encrypted_CTI_id], 
+    [recipient1].[Create_Date_Customer] AS [Create_Date_Customer], 
+    [recipient1].[Create_Media] AS [Create_Media], 
+    [recipient1].[Create_Source] AS [Create_Source], 
+    [recipient1].[DC_Brand] AS [DC_Brand], 
+    [recipient1].[Device] AS [Device], 
+    [recipient1].[DOB] AS [DOB], 
+    [recipient1].[Age] AS [Age], 
+    [recipient1].[Email_DC] AS [Email_DC], 
+    [recipient1].[Email_Saga] AS [Email_Saga], 
+    [recipient1].[Encrypted_Email_DC] AS [Encrypted_Email_DC], 
+    [recipient1].[Encrypted_Email_Saga] AS [Encrypted_Email_Saga], 
+    [recipient1].[Exclusion_Zone] AS [Exclusion_Zone], 
+    [recipient1].[firstName] AS [firstName], 
+    [recipient1].[Gender] AS [Gender], 
+    [recipient1].[Initials] AS [Initials], 
+    [recipient1].[Last_update_Customer] AS [Last_update_Customer], 
+    [recipient1].[lastName] AS [lastName], 
+    [recipient1].[Property_ID] AS [Property_ID], 
+    [recipient1].[location_address1] AS [location_address1], 
+    [recipient1].[location_address2] AS [location_address2], 
+    [recipient1].[location_address3] AS [location_address3], 
+    [recipient1].[location_address4] AS [location_address4], 
+    [recipient1].[location_address5] AS [location_address5], 
+    [recipient1].[location_address6] AS [location_address6], 
+    [recipient1].[location_address7] AS [location_address7], 
+    [recipient1].[location_zipCode] AS [location_zipCode], 
+    [recipient1].[location_DPS] AS [location_DPS], 
+    [recipient1].[Marital_Status] AS [Marital_Status], 
+    [recipient1].[Name_Suffix] AS [Name_Suffix], 
+    [recipient1].[Occupation_DC] AS [Occupation_DC], 
+    [recipient1].[Occupation_Saga] AS [Occupation_Saga], 
+    [recipient1].[Phone_Landline_DC] AS [Phone_Landline_DC], 
+    [recipient1].[Phone_Landline_Saga] AS [Phone_Landline_Saga], 
+    [recipient1].[Phone_Mobile_DC] AS [Phone_Mobile_DC], 
+    [recipient1].[Phone_Mobile_Saga] AS [Phone_Mobile_Saga], 
+    [recipient1].[Region] AS [Region], 
+    [recipient1].[Retirement_Date] AS [Retirement_Date], 
+    [recipient1].[Saga_Brand] AS [Saga_Brand], 
+    [recipient1].[Salutation_Detail] AS [Salutation_Detail], 
+    [recipient1].[Salutation_Envelope] AS [Salutation_Envelope], 
+    [recipient1].[SMS_Number_DC] AS [SMS_Number_DC], 
+    [recipient1].[SMS_Opt_Out_DC] AS [SMS_Opt_Out_DC], 
+    [recipient1].[SMS_Number_Saga] AS [SMS_Number_Saga], 
+    [recipient1].[SMS_Opt_Out_Saga] AS [SMS_Opt_Out_Saga], 
+    [recipient1].[Staff_Flag] AS [Staff_Flag], 
+    [recipient1].[suppressionFlag] AS [suppressionFlag], 
+    [recipient1].[suppressionReason] AS [suppressionReason], 
+    [recipient1].[Title] AS [Title], 
+    [recipient1].[TPS_Flag_Landline_DC] AS [TPS_Flag_Landline_DC], 
+    [recipient1].[TPS_Flag_Landline_Saga] AS [TPS_Flag_Landline_Saga], 
+    [recipient1].[TPS_Flag_Mobile_DC] AS [TPS_Flag_Mobile_DC], 
+    [recipient1].[TPS_Flag_Mobile_Saga] AS [TPS_Flag_Mobile_Saga], 
+    [recipient1].[UPRN] AS [UPRN], 
+    [recipient1].[UPRN_Match_Level] AS [UPRN_Match_Level], 
+    [recipient1].[Blacklist] AS [Blacklist], 
+    [recipient1].[GMD_Record_Creation_Date] AS [GMD_Record_Creation_Date], 
+    [recipient1].[GMD_Created_by] AS [GMD_Created_by], 
+    [recipient1].[GMD_Modified_Date] AS [GMD_Modified_Date], 
+    [recipient1].[GMD_Modified_by] AS [GMD_Modified_by], 
+    [recipient1].[GMD_Deletion_Date] AS [GMD_Deletion_Date], 
+    [recipient1].[date_sent_to_adobe] AS [date_sent_to_adobe], 
+    [recipient1].[adobe_sent_filename] AS [adobe_sent_filename], 
+    [recipient1].[received_response] AS [received_response], 
+    [recipient1].[received_response_date] AS [received_response_date], 
+    [recipient1].[version] AS [version]
+    FROM [AdobeExtractCP].[recipient] AS [recipient1]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GMD_DWHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GMD_DWHEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ExtractRecipients" EntityType="GMD_DWHModel.ExtractRecipient" />
+          <EntitySet Name="ExtractCPRecipients" EntityType="GMD_DWHModel.ExtractCPRecipient" />
+        </EntityContainer>
+        <EntityType Name="ExtractRecipient">
+          <Key>
+            <PropertyRef Name="Pers_id" />
+          </Key>
+          <Property Name="Pers_id" Type="Int64" Nullable="false" />
+          <Property Name="Encrypted_Pers_id" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Hgrp_id" Type="Int64" />
+          <Property Name="Visitor_id" Type="Int64" />
+          <Property Name="CTI_id" Type="Int64" />
+          <Property Name="Encrypted_CTI_id" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Create_Date_Customer" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Create_Media" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Create_Source" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DC_Brand" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Device" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Age" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Email_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Encrypted_Email_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Encrypted_Email_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Exclusion_Zone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="firstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Initials" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Last_update_Customer" Type="DateTime" Precision="0" />
+          <Property Name="lastName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Property_ID" Type="Int64" Nullable="false" />
+          <Property Name="location_address1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_zipCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_DPS" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Marital_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name_Suffix" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Landline_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Landline_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Mobile_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Mobile_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Retirement_Date" Type="DateTime" Precision="0" />
+          <Property Name="Saga_Brand" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Salutation_Detail" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Salutation_Envelope" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SMS_Number_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SMS_Opt_Out_DC" Type="Boolean" Nullable="false" />
+          <Property Name="SMS_Number_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SMS_Opt_Out_Saga" Type="Boolean" Nullable="false" />
+          <Property Name="Staff_Flag" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="suppressionFlag" Type="Boolean" />
+          <Property Name="suppressionReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TPS_Flag_Landline_DC" Type="Boolean" />
+          <Property Name="TPS_Flag_Landline_Saga" Type="Boolean" />
+          <Property Name="TPS_Flag_Mobile_DC" Type="Boolean" />
+          <Property Name="TPS_Flag_Mobile_Saga" Type="Boolean" />
+          <Property Name="UPRN" Type="Int64" Nullable="false" />
+          <Property Name="UPRN_Match_Level" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Blacklist" Type="Boolean" />
+          <Property Name="GMD_Record_Creation_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GMD_Created_by" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GMD_Modified_Date" Type="DateTime" Precision="3" />
+          <Property Name="GMD_Modified_by" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GMD_Deletion_Date" Type="DateTime" Precision="3" />
+          <Property Name="date_sent_to_adobe" Type="DateTime" Precision="3" />
+          <Property Name="adobe_sent_filename" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="received_response" Type="Boolean" />
+          <Property Name="received_response_date" Type="DateTime" Precision="3" />
+          <Property Name="version" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExtractCPRecipient">
+          <Key>
+            <PropertyRef Name="Pers_id" />
+          </Key>
+          <Property Name="Pers_id" Type="Int64" Nullable="false" />
+          <Property Name="Encrypted_Pers_id" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Hgrp_id" Type="Int64" />
+          <Property Name="Visitor_id" Type="Int64" />
+          <Property Name="CTI_id" Type="Int64" />
+          <Property Name="Encrypted_CTI_id" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Create_Date_Customer" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Create_Media" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Create_Source" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DC_Brand" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Device" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Email_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Encrypted_Email_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Encrypted_Email_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Exclusion_Zone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="firstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Initials" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Last_update_Customer" Type="DateTime" Precision="0" />
+          <Property Name="lastName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Property_ID" Type="Int64" Nullable="false" />
+          <Property Name="location_address1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_address7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_zipCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="location_DPS" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Marital_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name_Suffix" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Landline_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Landline_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Mobile_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_Mobile_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Retirement_Date" Type="DateTime" Precision="0" />
+          <Property Name="Saga_Brand" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Salutation_Detail" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Salutation_Envelope" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SMS_Number_DC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SMS_Opt_Out_DC" Type="Boolean" Nullable="false" />
+          <Property Name="SMS_Number_Saga" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SMS_Opt_Out_Saga" Type="Boolean" Nullable="false" />
+          <Property Name="Staff_Flag" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="suppressionFlag" Type="Boolean" />
+          <Property Name="suppressionReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TPS_Flag_Landline_DC" Type="Boolean" />
+          <Property Name="TPS_Flag_Landline_Saga" Type="Boolean" />
+          <Property Name="TPS_Flag_Mobile_DC" Type="Boolean" />
+          <Property Name="TPS_Flag_Mobile_Saga" Type="Boolean" />
+          <Property Name="UPRN" Type="Int64" Nullable="false" />
+          <Property Name="UPRN_Match_Level" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Blacklist" Type="Boolean" />
+          <Property Name="GMD_Record_Creation_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GMD_Created_by" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GMD_Modified_Date" Type="DateTime" Precision="3" />
+          <Property Name="GMD_Modified_by" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GMD_Deletion_Date" Type="DateTime" Precision="3" />
+          <Property Name="date_sent_to_adobe" Type="DateTime" Precision="3" />
+          <Property Name="adobe_sent_filename" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="received_response" Type="Boolean" />
+          <Property Name="received_response_date" Type="DateTime" Precision="3" />
+          <Property Name="version" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GMD_DWHModelStoreContainer" CdmEntityContainer="GMD_DWHEntities">
+          <EntitySetMapping Name="ExtractRecipients">
+            <EntityTypeMapping TypeName="GMD_DWHModel.ExtractRecipient">
+              <MappingFragment StoreEntitySet="recipient">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="received_response_date" ColumnName="received_response_date" />
+                <ScalarProperty Name="received_response" ColumnName="received_response" />
+                <ScalarProperty Name="adobe_sent_filename" ColumnName="adobe_sent_filename" />
+                <ScalarProperty Name="date_sent_to_adobe" ColumnName="date_sent_to_adobe" />
+                <ScalarProperty Name="GMD_Deletion_Date" ColumnName="GMD_Deletion_Date" />
+                <ScalarProperty Name="GMD_Modified_by" ColumnName="GMD_Modified_by" />
+                <ScalarProperty Name="GMD_Modified_Date" ColumnName="GMD_Modified_Date" />
+                <ScalarProperty Name="GMD_Created_by" ColumnName="GMD_Created_by" />
+                <ScalarProperty Name="GMD_Record_Creation_Date" ColumnName="GMD_Record_Creation_Date" />
+                <ScalarProperty Name="Blacklist" ColumnName="Blacklist" />
+                <ScalarProperty Name="UPRN_Match_Level" ColumnName="UPRN_Match_Level" />
+                <ScalarProperty Name="UPRN" ColumnName="UPRN" />
+                <ScalarProperty Name="TPS_Flag_Mobile_Saga" ColumnName="TPS_Flag_Mobile_Saga" />
+                <ScalarProperty Name="TPS_Flag_Mobile_DC" ColumnName="TPS_Flag_Mobile_DC" />
+                <ScalarProperty Name="TPS_Flag_Landline_Saga" ColumnName="TPS_Flag_Landline_Saga" />
+                <ScalarProperty Name="TPS_Flag_Landline_DC" ColumnName="TPS_Flag_Landline_DC" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="suppressionReason" ColumnName="suppressionReason" />
+                <ScalarProperty Name="suppressionFlag" ColumnName="suppressionFlag" />
+                <ScalarProperty Name="Staff_Flag" ColumnName="Staff_Flag" />
+                <ScalarProperty Name="SMS_Opt_Out_Saga" ColumnName="SMS_Opt_Out_Saga" />
+                <ScalarProperty Name="SMS_Number_Saga" ColumnName="SMS_Number_Saga" />
+                <ScalarProperty Name="SMS_Opt_Out_DC" ColumnName="SMS_Opt_Out_DC" />
+                <ScalarProperty Name="SMS_Number_DC" ColumnName="SMS_Number_DC" />
+                <ScalarProperty Name="Salutation_Envelope" ColumnName="Salutation_Envelope" />
+                <ScalarProperty Name="Salutation_Detail" ColumnName="Salutation_Detail" />
+                <ScalarProperty Name="Saga_Brand" ColumnName="Saga_Brand" />
+                <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Phone_Mobile_Saga" ColumnName="Phone_Mobile_Saga" />
+                <ScalarProperty Name="Phone_Mobile_DC" ColumnName="Phone_Mobile_DC" />
+                <ScalarProperty Name="Phone_Landline_Saga" ColumnName="Phone_Landline_Saga" />
+                <ScalarProperty Name="Phone_Landline_DC" ColumnName="Phone_Landline_DC" />
+                <ScalarProperty Name="Occupation_Saga" ColumnName="Occupation_Saga" />
+                <ScalarProperty Name="Occupation_DC" ColumnName="Occupation_DC" />
+                <ScalarProperty Name="Name_Suffix" ColumnName="Name_Suffix" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital_Status" />
+                <ScalarProperty Name="location_DPS" ColumnName="location_DPS" />
+                <ScalarProperty Name="location_zipCode" ColumnName="location_zipCode" />
+                <ScalarProperty Name="location_address7" ColumnName="location_address7" />
+                <ScalarProperty Name="location_address6" ColumnName="location_address6" />
+                <ScalarProperty Name="location_address5" ColumnName="location_address5" />
+                <ScalarProperty Name="location_address4" ColumnName="location_address4" />
+                <ScalarProperty Name="location_address3" ColumnName="location_address3" />
+                <ScalarProperty Name="location_address2" ColumnName="location_address2" />
+                <ScalarProperty Name="location_address1" ColumnName="location_address1" />
+                <ScalarProperty Name="Property_ID" ColumnName="Property_ID" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="Last_update_Customer" ColumnName="Last_update_Customer" />
+                <ScalarProperty Name="Initials" ColumnName="Initials" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="Exclusion_Zone" ColumnName="Exclusion_Zone" />
+                <ScalarProperty Name="Encrypted_Email_Saga" ColumnName="Encrypted_Email_Saga" />
+                <ScalarProperty Name="Encrypted_Email_DC" ColumnName="Encrypted_Email_DC" />
+                <ScalarProperty Name="Email_Saga" ColumnName="Email_Saga" />
+                <ScalarProperty Name="Email_DC" ColumnName="Email_DC" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="DC_Brand" ColumnName="DC_Brand" />
+                <ScalarProperty Name="Create_Source" ColumnName="Create_Source" />
+                <ScalarProperty Name="Create_Media" ColumnName="Create_Media" />
+                <ScalarProperty Name="Create_Date_Customer" ColumnName="Create_Date_Customer" />
+                <ScalarProperty Name="Encrypted_CTI_id" ColumnName="Encrypted_CTI_id" />
+                <ScalarProperty Name="CTI_id" ColumnName="CTI_id" />
+                <ScalarProperty Name="Visitor_id" ColumnName="Visitor_id" />
+                <ScalarProperty Name="Hgrp_id" ColumnName="Hgrp_id" />
+                <ScalarProperty Name="Encrypted_Pers_id" ColumnName="Encrypted_Pers_id" />
+                <ScalarProperty Name="Pers_id" ColumnName="Pers_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExtractCPRecipients">
+            <EntityTypeMapping TypeName="GMD_DWHModel.ExtractCPRecipient">
+              <MappingFragment StoreEntitySet="recipient1">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="received_response_date" ColumnName="received_response_date" />
+                <ScalarProperty Name="received_response" ColumnName="received_response" />
+                <ScalarProperty Name="adobe_sent_filename" ColumnName="adobe_sent_filename" />
+                <ScalarProperty Name="date_sent_to_adobe" ColumnName="date_sent_to_adobe" />
+                <ScalarProperty Name="GMD_Deletion_Date" ColumnName="GMD_Deletion_Date" />
+                <ScalarProperty Name="GMD_Modified_by" ColumnName="GMD_Modified_by" />
+                <ScalarProperty Name="GMD_Modified_Date" ColumnName="GMD_Modified_Date" />
+                <ScalarProperty Name="GMD_Created_by" ColumnName="GMD_Created_by" />
+                <ScalarProperty Name="GMD_Record_Creation_Date" ColumnName="GMD_Record_Creation_Date" />
+                <ScalarProperty Name="Blacklist" ColumnName="Blacklist" />
+                <ScalarProperty Name="UPRN_Match_Level" ColumnName="UPRN_Match_Level" />
+                <ScalarProperty Name="UPRN" ColumnName="UPRN" />
+                <ScalarProperty Name="TPS_Flag_Mobile_Saga" ColumnName="TPS_Flag_Mobile_Saga" />
+                <ScalarProperty Name="TPS_Flag_Mobile_DC" ColumnName="TPS_Flag_Mobile_DC" />
+                <ScalarProperty Name="TPS_Flag_Landline_Saga" ColumnName="TPS_Flag_Landline_Saga" />
+                <ScalarProperty Name="TPS_Flag_Landline_DC" ColumnName="TPS_Flag_Landline_DC" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="suppressionReason" ColumnName="suppressionReason" />
+                <ScalarProperty Name="suppressionFlag" ColumnName="suppressionFlag" />
+                <ScalarProperty Name="Staff_Flag" ColumnName="Staff_Flag" />
+                <ScalarProperty Name="SMS_Opt_Out_Saga" ColumnName="SMS_Opt_Out_Saga" />
+                <ScalarProperty Name="SMS_Number_Saga" ColumnName="SMS_Number_Saga" />
+                <ScalarProperty Name="SMS_Opt_Out_DC" ColumnName="SMS_Opt_Out_DC" />
+                <ScalarProperty Name="SMS_Number_DC" ColumnName="SMS_Number_DC" />
+                <ScalarProperty Name="Salutation_Envelope" ColumnName="Salutation_Envelope" />
+                <ScalarProperty Name="Salutation_Detail" ColumnName="Salutation_Detail" />
+                <ScalarProperty Name="Saga_Brand" ColumnName="Saga_Brand" />
+                <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Phone_Mobile_Saga" ColumnName="Phone_Mobile_Saga" />
+                <ScalarProperty Name="Phone_Mobile_DC" ColumnName="Phone_Mobile_DC" />
+                <ScalarProperty Name="Phone_Landline_Saga" ColumnName="Phone_Landline_Saga" />
+                <ScalarProperty Name="Phone_Landline_DC" ColumnName="Phone_Landline_DC" />
+                <ScalarProperty Name="Occupation_Saga" ColumnName="Occupation_Saga" />
+                <ScalarProperty Name="Occupation_DC" ColumnName="Occupation_DC" />
+                <ScalarProperty Name="Name_Suffix" ColumnName="Name_Suffix" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital_Status" />
+                <ScalarProperty Name="location_DPS" ColumnName="location_DPS" />
+                <ScalarProperty Name="location_zipCode" ColumnName="location_zipCode" />
+                <ScalarProperty Name="location_address7" ColumnName="location_address7" />
+                <ScalarProperty Name="location_address6" ColumnName="location_address6" />
+                <ScalarProperty Name="location_address5" ColumnName="location_address5" />
+                <ScalarProperty Name="location_address4" ColumnName="location_address4" />
+                <ScalarProperty Name="location_address3" ColumnName="location_address3" />
+                <ScalarProperty Name="location_address2" ColumnName="location_address2" />
+                <ScalarProperty Name="location_address1" ColumnName="location_address1" />
+                <ScalarProperty Name="Property_ID" ColumnName="Property_ID" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="Last_update_Customer" ColumnName="Last_update_Customer" />
+                <ScalarProperty Name="Initials" ColumnName="Initials" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="Exclusion_Zone" ColumnName="Exclusion_Zone" />
+                <ScalarProperty Name="Encrypted_Email_Saga" ColumnName="Encrypted_Email_Saga" />
+                <ScalarProperty Name="Encrypted_Email_DC" ColumnName="Encrypted_Email_DC" />
+                <ScalarProperty Name="Email_Saga" ColumnName="Email_Saga" />
+                <ScalarProperty Name="Email_DC" ColumnName="Email_DC" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Device" ColumnName="Device" />
+                <ScalarProperty Name="DC_Brand" ColumnName="DC_Brand" />
+                <ScalarProperty Name="Create_Source" ColumnName="Create_Source" />
+                <ScalarProperty Name="Create_Media" ColumnName="Create_Media" />
+                <ScalarProperty Name="Create_Date_Customer" ColumnName="Create_Date_Customer" />
+                <ScalarProperty Name="Encrypted_CTI_id" ColumnName="Encrypted_CTI_id" />
+                <ScalarProperty Name="CTI_id" ColumnName="CTI_id" />
+                <ScalarProperty Name="Visitor_id" ColumnName="Visitor_id" />
+                <ScalarProperty Name="Hgrp_id" ColumnName="Hgrp_id" />
+                <ScalarProperty Name="Encrypted_Pers_id" ColumnName="Encrypted_Pers_id" />
+                <ScalarProperty Name="Pers_id" ColumnName="Pers_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
